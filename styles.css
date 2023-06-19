@@ -6,8 +6,8 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: darkblue;
-    padding: 10px;
+    background-color: black; /* Change background color to black */
+    padding: 25px; /* Increase padding to make the navigation bar larger */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -15,57 +15,63 @@
     animation: fadeInNav 1s ease-in forwards;
     z-index: 1;
     color: white;
-  }
-  
-  @keyframes fadeInNav {
+}
+
+@keyframes fadeInNav {
     from {
-      opacity: 0;
+        opacity: 0;
     }
     to {
-      opacity: 1;
+        opacity: 1;
     }
-  }
-  
-  #top-section h1 {
+}
+
+#top-section h1 {
     margin: 0;
     font-family: "Century Gothic", Arial, sans-serif;
     margin-right: 20px;
-  }
-  
-  #top-section ul {
+}
+
+#top-section ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
     align-items: center;
-  }
-  
-  #top-section li {
+}
+
+#top-section li {
     margin-right: 10px;
-  }
-  
-  #top-section a {
+}
+
+#top-section li:last-child {
+    margin-right: 0;
+}
+
+#top-section a {
     text-decoration: none;
+    text-transform: lowercase;
     color: white;
     font-family: "Century Gothic", Arial, sans-serif;
-    font-weight: normal;
+    font-weight: lighter;
     transition: font-weight 0.3s ease-in-out;
-  }
-  
-  #top-section a.selected,
-  #top-section a:hover {
-    font-weight: bold;
-  }
-  
-  /* Update background to white */
-  body {
+}
+
+#top-section a.selected,
+#top-section a:hover {
+    text-decoration-line: underline;
+    text-transform: lowercase;
+}
+
+/* Update background to white */
+body {
     background-color: white;
     margin: 0;
     padding: 0;
-  }
-  
-  /* Add some basic styles for the sections */
-  section {
+}
+
+/* Add some basic styles for the sections */
+section {
     padding: 50px;
     margin-bottom: 20px;
     display: flex;
@@ -76,72 +82,71 @@
     animation: fadeInSection 1s ease-in forwards;
     height: 800px; /* Set the height to 800 pixels */
     background-color: white; /* Change background color to white */
-  }
-  
-  section#about {
+}
+
+section#about {
     margin-top: 80px; /* Add margin above the about section */
-  }
-  
-  @keyframes fadeInSection {
+}
+
+@keyframes fadeInSection {
     from {
-      opacity: 0;
+        opacity: 0;
     }
     to {
-      opacity: 1;
+        opacity: 1;
     }
-  }
-  
-  section h2 {
+}
+
+section h2 {
     margin-top: 20px;
     font-family: "Century Gothic", Arial, sans-serif;
     margin-bottom: 20px;
     color: black; /* Change text color to black */
-  }
-  
-  section p {
+}
+
+section p {
     margin-bottom: 0;
     font-family: "Century Gothic", Arial, sans-serif;
     margin-bottom: 20px;
     color: black; /* Change text color to black */
-  }
-  
-  section:not(:first-of-type) {
+}
+
+section:not(:first-of-type) {
     margin-top: 60px;
-  }
-  
-  /* Styles for the footer */
-  footer {
+}
+
+/* Styles for the footer */
+footer {
     background-color: darkblue;
     padding: 20px;
     color: white;
     text-align: center;
     font-family: "Century Gothic", Arial, sans-serif;
-  }
-  
-  footer p {
+}
+
+footer p {
     margin-top: 10px;
-  }
-  
-  /* Styles for the footer links */
-  footer ul {
+}
+
+/* Styles for the footer links */
+footer ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
-  }
-  
-  footer li {
+}
+
+footer li {
     margin-right: 10px;
-  }
-  
-  footer a {
+}
+
+footer a {
     text-decoration: none;
     color: white;
-  }
-  
-  footer a:hover {
+}
+
+footer a:hover {
     text-decoration: underline;
-  }
-  
-  
+}
+``

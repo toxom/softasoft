@@ -7,9 +7,11 @@
 </head>
 <body>
     <div id="top-section">
-        <h1>Welcome to My Website!</h1>
         <?php include 'navigation.php'; ?>
     </div>
+
+    <section id="softa">
+    </section>
 
     <section id="about">
         <h2>About</h2>
