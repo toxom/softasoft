@@ -1,31 +1,100 @@
 /* styles.css */
 
-/* Add some basic styles for the sections */
-section {
+/* Additional styles for the top section/navigation */
+#top-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: lightblue;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    animation: fadeInNav 1s ease-in forwards;
+    z-index: 1; /* Ensure the navigation is above the sections */
+  }
+  
+  @keyframes fadeInNav {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  #top-section h1 {
+    margin: 0;
+    font-family: "Century Gothic", Arial, sans-serif;
+    margin-right: 20px;
+  }
+  
+  #top-section ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  #top-section li {
+    margin-right: 10px;
+  }
+  
+  #top-section a {
+    text-decoration: none;
+    color: black;
+    font-family: "Century Gothic", Arial, sans-serif;
+    font-weight: normal;
+    transition: font-weight 0.3s ease-in-out;
+  }
+  
+  #top-section a.selected,
+  #top-section a:hover {
+    font-weight: bold;
+  }
+  
+  /* Add some basic styles for the sections */
+  section {
     padding: 50px;
     margin-bottom: 20px;
     background-color: #f9f9f9;
     height: 700px; /* Set the height to 700 pixels */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-}
-
-/* Adjust the height of the header and paragraph tags within the sections */
-section h2 {
-    margin-top: 0;
+    justify-content: flex-start; /* Align content to the top */
+    align-items: center; /* Center content horizontally */
+    opacity: 0;
+    animation: fadeInSection 1s ease-in forwards;
+  }
+  
+  @keyframes fadeInSection {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  section h2 {
+    margin-top: 20px; /* Add margin above the section title */
     font-family: "Century Gothic", Arial, sans-serif;
-}
-
-section p {
+    margin-bottom: 20px; /* Add margin below the section title */
+  }
+  
+  section p {
     margin-bottom: 0;
     font-family: "Century Gothic", Arial, sans-serif;
-}
-
-/* Apply Century Gothic font to all headings in the page */
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Century Gothic", Arial, sans-serif;
-}
-
-/* Apply Century Gothic font to the first paragraph */
-p:first-of-type {
+    margin-bottom: 20px; /* Add margin below the section content */
+  }
+  
+  section:not(:first-of-type) {
+    margin-top: 60px; /* Increase the top margin to create more spacing */
+  }
+  
+  section#about {
+    margin-top: 80px; /* Adjust the margin-top for the about section */
+  }
+  
