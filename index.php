@@ -26,7 +26,8 @@
         <p>This is the contact section of the website. Include your contact information, such as phone number, email, or a contact form.</p>
     </section>
 
-    <!-- Link the JavaScript file -->
+    <?php include 'footer.php'; ?>
+    
     <script src="navigation.js"></script>
 </body>
 </html>

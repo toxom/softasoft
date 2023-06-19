@@ -6,14 +6,15 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: lightblue;
+    background-color: darkblue;
     padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     opacity: 0;
     animation: fadeInNav 1s ease-in forwards;
-    z-index: 1; /* Ensure the navigation is above the sections */
+    z-index: 1;
+    color: white;
   }
   
   @keyframes fadeInNav {
@@ -36,6 +37,7 @@
     margin: 0;
     padding: 0;
     display: flex;
+    align-items: center;
   }
   
   #top-section li {
@@ -44,7 +46,7 @@
   
   #top-section a {
     text-decoration: none;
-    color: black;
+    color: white;
     font-family: "Century Gothic", Arial, sans-serif;
     font-weight: normal;
     transition: font-weight 0.3s ease-in-out;
@@ -55,18 +57,29 @@
     font-weight: bold;
   }
   
+  /* Update background to white */
+  body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+  }
+  
   /* Add some basic styles for the sections */
   section {
     padding: 50px;
     margin-bottom: 20px;
-    background-color: #f9f9f9;
-    height: 700px; /* Set the height to 700 pixels */
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Align content to the top */
-    align-items: center; /* Center content horizontally */
+    justify-content: flex-start;
+    align-items: center;
     opacity: 0;
     animation: fadeInSection 1s ease-in forwards;
+    height: 800px; /* Set the height to 800 pixels */
+    background-color: white; /* Change background color to white */
+  }
+  
+  section#about {
+    margin-top: 80px; /* Add margin above the about section */
   }
   
   @keyframes fadeInSection {
@@ -79,22 +92,56 @@
   }
   
   section h2 {
-    margin-top: 20px; /* Add margin above the section title */
+    margin-top: 20px;
     font-family: "Century Gothic", Arial, sans-serif;
-    margin-bottom: 20px; /* Add margin below the section title */
+    margin-bottom: 20px;
+    color: black; /* Change text color to black */
   }
   
   section p {
     margin-bottom: 0;
     font-family: "Century Gothic", Arial, sans-serif;
-    margin-bottom: 20px; /* Add margin below the section content */
+    margin-bottom: 20px;
+    color: black; /* Change text color to black */
   }
   
   section:not(:first-of-type) {
-    margin-top: 60px; /* Increase the top margin to create more spacing */
+    margin-top: 60px;
   }
   
-  section#about {
-    margin-top: 80px; /* Adjust the margin-top for the about section */
+  /* Styles for the footer */
+  footer {
+    background-color: darkblue;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-family: "Century Gothic", Arial, sans-serif;
   }
+  
+  footer p {
+    margin-top: 10px;
+  }
+  
+  /* Styles for the footer links */
+  footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  footer li {
+    margin-right: 10px;
+  }
+  
+  footer a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
   
