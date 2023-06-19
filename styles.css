@@ -6,7 +6,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: black; /* Change background color to black */
+    background-color: white; /* Change background color to black */
     padding: 25px; /* Increase padding to make the navigation bar larger */
     display: flex;
     align-items: center;
@@ -15,6 +15,13 @@
     animation: fadeInNav 1s ease-in forwards;
     z-index: 1;
     color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a box shadow */
+}
+
+#top-section a:hover {
+    color: darkcyan; /* Change the text color on hover */
+    transition: color 0.3s ease-in-out; /* Apply a transition effect */
+    text-decoration: underline; /* Add an underline effect on hover */
 }
 
 @keyframes fadeInNav {
@@ -51,16 +58,24 @@
 #top-section a {
     text-decoration: none;
     text-transform: lowercase;
-    color: white;
+    color: gray;
     font-family: "Century Gothic", Arial, sans-serif;
-    font-weight: lighter;
+    font-weight: 600;
     transition: font-weight 0.3s ease-in-out;
 }
 
-#top-section a.selected,
+
+
 #top-section a:hover {
+    color: darkcyan
+    transition: color 0.3s ease-in-out; /* Apply a transition effect */
     text-decoration-line: underline;
     text-transform: lowercase;
+}
+
+#top-section a.selected {
+    text-transform: lowercase;
+    color: darkcyan
 }
 
 /* Update background to white */
