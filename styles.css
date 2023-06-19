@@ -1,0 +1,21 @@
+/* styles.css */
+
+/* Add some basic styles for the sections */
+section {
+    padding: 50px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    height: 700px; /* Set the height to 700 pixels */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Adjust the height of the header and paragraph tags within the sections */
+section h2 {
+    margin-top: 0;
+}
+
+section p {
+    margin-bottom: 0;
+}
