@@ -14,8 +14,18 @@ section {
 /* Adjust the height of the header and paragraph tags within the sections */
 section h2 {
     margin-top: 0;
+    font-family: "Century Gothic", Arial, sans-serif;
 }
 
 section p {
     margin-bottom: 0;
+    font-family: "Century Gothic", Arial, sans-serif;
 }
+
+/* Apply Century Gothic font to all headings in the page */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Century Gothic", Arial, sans-serif;
+}
+
+/* Apply Century Gothic font to the first paragraph */
+p:first-of-type {
