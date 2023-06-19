@@ -19,9 +19,9 @@
 }
 
 #top-section a:hover {
-    color: darkcyan; /* Change the text color on hover */
-    transition: color 0.3s ease-in-out; /* Apply a transition effect */
-    text-decoration: underline; /* Add an underline effect on hover */
+    background-color: aquamarine;
+    #color: darkcyan; /* Change the text color on hover */
+    transition: background-color 0.3s ease-in-out; /* Apply a transition effect */
 }
 
 @keyframes fadeInNav {
@@ -67,15 +67,14 @@
 
 
 #top-section a:hover {
+    text-transform: lowercase;
     color: darkcyan
     transition: color 0.3s ease-in-out; /* Apply a transition effect */
-    text-decoration-line: underline;
-    text-transform: lowercase;
 }
 
 #top-section a.selected {
     text-transform: lowercase;
-    color: darkcyan
+    color: rgb(35, 177, 177)
 }
 
 /* Update background to white */
