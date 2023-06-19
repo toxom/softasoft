@@ -131,7 +131,7 @@ section:not(:first-of-type) {
 
 /* Styles for the footer */
 footer {
-    background-color: darkblue;
+    background-color: darkcyan;
     padding: 20px;
     color: white;
     text-align: center;
