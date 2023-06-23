@@ -10,7 +10,7 @@
     padding: 25px; /* Increase padding to make the navigation bar larger */
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center; /* Center items horizontally */
     opacity: 0;
     animation: fadeInNav 1s ease-in forwards;
     z-index: 1;
@@ -163,4 +163,48 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+/* Styles for the side navigation bar */
+.sidenav {
+    height: 100%;
+    width: 50px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align: center;  /* Added to center the text */
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    padding: 8px 0;  /* Adjusted to align the text vertically */
+}
+
+.sidenav a .nav-long {
+    display: none;  /* Hidden by default */
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav:hover {
+    width: 300px;
+}
+
+.sidenav:hover a .nav-long {
+    display: inline;  /* Displayed when the side nav is expanded */
+}
+
+
+
 ``

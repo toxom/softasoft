@@ -2,14 +2,17 @@
 <html>
 <head>
     <title>Welcome to My Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Century+Gothic&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="top-section">
-        <?php include 'navigation.php'; ?>
-    </div>
+    <?php include 'navigation.php'; ?>
 
+    <div id="top-section">
+        <!-- Here you can put other elements you want to be inside the top section -->
+    </div>
+    
     <section id="softa">
     </section>
 
