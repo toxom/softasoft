@@ -15,7 +15,7 @@ function setActiveLink() {
   const sections = document.querySelectorAll("section");
 
   // Get all the navigation links
-  const navLinks = document.querySelectorAll("#top-section a, #sidenav a");
+  const navLinks = document.querySelectorAll("#header a, #sidenav a");
 
   // Iterate over each section
   sections.forEach((section) => {

@@ -1,5 +1,5 @@
 <!-- navigation.php -->
-<div class="top-section">
+<div id="header">
     <nav>
         <ul>
             <li><a href="#softa">Softa</a></li>

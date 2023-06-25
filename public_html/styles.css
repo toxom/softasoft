@@ -1,15 +1,15 @@
 /* styles.css */
 
 /* Additional styles for the top section/navigation */
-#top-section {
+#header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: white; /* Change background color to black */
+    background-color: black; /* Change background color to black */
     padding: 25px; /* Increase padding to make the navigation bar larger */
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center; /* Center items horizontally */
     opacity: 0;
     animation: fadeInNav 1s ease-in forwards;
@@ -18,7 +18,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a box shadow */
 }
 
-#top-section a:hover {
+#header a:hover {
     background-color: aquamarine;
     #color: darkcyan; /* Change the text color on hover */
     transition: background-color 0.3s ease-in-out; /* Apply a transition effect */
@@ -33,13 +33,13 @@
     }
 }
 
-#top-section h1 {
-    margin: 0;
+#header h1 {
+    margin: center;
     font-family: "Century Gothic", Arial, sans-serif;
     margin-right: 20px;
 }
 
-#top-section ul {
+#header ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -47,15 +47,15 @@
     align-items: center;
 }
 
-#top-section li {
+#header li {
     margin-right: 10px;
 }
 
-#top-section li:last-child {
+#header li:last-child {
     margin-right: 0;
 }
 
-#top-section a {
+#header a {
     text-decoration: none;
     text-transform: lowercase;
     color: gray;
@@ -66,13 +66,13 @@
 
 
 
-#top-section a:hover {
+#header a:hover {
     text-transform: lowercase;
     color: darkcyan
     transition: color 0.3s ease-in-out; /* Apply a transition effect */
 }
 
-#top-section a.selected {
+#header a.selected {
     text-transform: lowercase;
     color: rgb(35, 177, 177)
 }
@@ -205,6 +205,33 @@ footer a:hover {
     display: inline;  /* Displayed when the side nav is expanded */
 }
 
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.search-container input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+}
+
+.search-container button {
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-left: 10px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background: #ccc;
+}
 
 
 ``

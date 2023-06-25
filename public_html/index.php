@@ -9,9 +9,17 @@
 <body>
     <?php include 'navigation.php'; ?>
 
-    <div id="top-section">
+    <div id="header">
         <!-- Here you can put other elements you want to be inside the top section -->
     </div>
+
+    <div class="search-container">
+        <form action="/search.php" method="post">
+            <input type="text" placeholder="Search.." name="search" maxlength="50">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+
     
     <section id="softa">
     </section>
