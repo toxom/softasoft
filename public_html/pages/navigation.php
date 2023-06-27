@@ -1,4 +1,3 @@
-<!-- navigation.php -->
 <div id="header">
     <nav>
         <ul>
@@ -16,3 +15,11 @@
     <a href="#services">Se</a>
     <a href="#contact">C</a>
 </div>
+
+<div id="pronav" class="pronav">
+    <a href="#softa">S</a>
+    <a href="#about">A</a>
+    <a href="#services">Se</a>
+    <a href="#contact">C</a>
+</div>
+

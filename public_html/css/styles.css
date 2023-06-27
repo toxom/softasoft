@@ -7,15 +7,16 @@
     left: 0;
     width: 100%;
     background-color: black; /* Change background color to black */
-    padding: 25px; /* Increase padding to make the navigation bar larger */
+    padding: 5px; /* Increase padding to make the navigation bar larger */
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center; /* Center items horizontally */
     opacity: 0;
     animation: fadeInNav 1s ease-in forwards;
     z-index: 1;
     color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a box shadow */
+
 }
 
 #header a:hover {
@@ -40,6 +41,7 @@
 }
 
 #header ul {
+    visibility: visible;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -210,6 +212,8 @@ footer a:hover {
     display: flex;
     justify-content: center;
     padding: 20px;
+    margin-right: 20px;
+
 }
 
 .search-container input[type=text] {
@@ -233,5 +237,72 @@ footer a:hover {
     background: #ccc;
 }
 
+/* Add styles for the login/registration form */
+.login-container form input[type="email"],
+.login-container form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border: 1px solid lightgray;
+    border-radius: px;
+    background-color: white;
+}
+
+.login-container form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.login-container form button:hover {
+    background-color: darkgray;
+}
+
+
+/* Styles for the new right sidenav */
+#pronav {
+    height: 100%;
+    width: 50px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0; /* Align the sidenav to the right */
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align: center;
+}
+
+#pronav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    padding: 8px 0;
+}
+
+#pronav a .nav-long {
+    display: none;
+}
+
+#pronav a:hover {
+    color: #f1f1f1;
+}
+
+#pronav:hover {
+    width: 300px;
+    right: 0; /* Ensure the sidenav expands towards the left */
+}
+
+#pronav:hover a .nav-long {
+    display: inline;
+}
 
 ``
