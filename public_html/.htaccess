@@ -1,0 +1,3 @@
+<Files "index.php">
+ForceType application/x-httpd-php
+</Files>
