@@ -6,11 +6,12 @@
     top: 0;
     left: 0;
     width: 100%;
+    height: 50px;
     background-color: black; /* Change background color to black */
-    padding: 5px; /* Increase padding to make the navigation bar larger */
+    padding: 0px; /* Increase padding to make the navigation bar larger */
     display: flex;
     align-items: center;
-    justify-content: center; /* Center items horizontally */
+    justify-content: flex-start;
     opacity: 0;
     animation: fadeInNav 1s ease-in forwards;
     z-index: 1;
@@ -22,6 +23,12 @@
 #header a:hover {
     background-color: aquamarine;
     #color: darkcyan; /* Change the text color on hover */
+    transition: background-color 0.3s ease-in-out; /* Apply a transition effect */
+}
+
+#header a:active {
+    background-color: red;
+    #color: green; /* Change the text color on hover */
     transition: background-color 0.3s ease-in-out; /* Apply a transition effect */
 }
 
@@ -76,7 +83,9 @@
 
 #header a.selected {
     text-transform: lowercase;
-    color: rgb(35, 177, 177)
+    color: darkcyan;
+    font-weight: 600;
+    transition: color 0.3.s ease-in-out;;
 }
 
 /* Update background to white */
@@ -196,15 +205,22 @@ footer a:hover {
 }
 
 .sidenav a:hover {
-    color: #f1f1f1;
+    background-color: darkcyan;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a box shadow */
+
 }
 
 .sidenav:hover {
     width: 300px;
+    background-color: darkcyan;
+    transition: 0.3s;
+
 }
 
 .sidenav:hover a .nav-long {
     display: inline;  /* Displayed when the side nav is expanded */
+    background-color: cyan;
+
 }
 
 
@@ -303,6 +319,10 @@ footer a:hover {
 
 #pronav:hover a .nav-long {
     display: inline;
+}
+
+.slide-left {
+    transition: transform 0.5s ease;
 }
 
 ``
