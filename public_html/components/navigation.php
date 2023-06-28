@@ -1,15 +1,23 @@
 <div id="sidenav" class="sidenav">
-    <a href="#softa">Login</a>
-    <a href="#about">Play</a>
-    <a href="#services">Forum</a>
-    <a href="#contact">Contact</a>
+    <button id="joinButton" class="button-join" onclick="toggleButtonText()">Join</button>
+    <div class="login-container login-content" id="loginContent">
+        <?php include 'components/login.php'; ?>
+    </div>
 </div>
 
-<div id="pronav" class="sidenav">
-    <a href="#softa">S</a>
-    <a href="#about">A</a>
-    <a href="#services">Se</a>
-    <a href="#contact">C</a>
+<div id="toolnav" class="sidenav">
+    <div class="login-container login-content" id="loginContent">
+        <?php include 'components/login.php'; ?>
+    </div>
 </div>
 
 <script src="js/navigation.js"></script>
+
+<style>
+    #toolnav {
+        right: 0;
+        left: auto;
+    }
+ </style>
+
+ 

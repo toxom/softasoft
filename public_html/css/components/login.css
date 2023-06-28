@@ -1,0 +1,21 @@
+
+/* Import common styles */
+@import url("styles.css");
+
+/* Additional styles specific to header */
+/* Add your custom styles here */
+
+
+/* Styles for the login icon */
+.login-icon {
+    fill: white; /* Change the icon color to white */
+    transition: fill 0.3s ease-in-out; /* Add a transition effect for the color change */
+}
+
+.login-icon:hover {
+    fill: aquamarine; /* Change the icon color on hover */
+}
+
+.login-icon:active {
+    fill: red; /* Change the icon color when clicked */
+}

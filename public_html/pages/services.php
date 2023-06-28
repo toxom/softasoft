@@ -1,3 +1,8 @@
+<section id="services">
+    <h2>Services</h2>
+    <p>This is the services section of the website. List the services you offer and provide details about each service.</p>
+</section>
+
 <!DOCTYPE html>
 <html>
 <head>

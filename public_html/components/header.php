@@ -1,9 +1,9 @@
 <header id="header" style="display: flex;">
-    <div style="margin-left: 50px;">
+    <div style="margin-left: 150px;">
         <img src="assets/logos/logos.svg" alt="Logo" onclick="scrollToTop()" class="logo">
     </div>    
     <div class="section-links" style="margin-left: 10px; margin-right: 10px">
-        <a href="#about" onclick="event.preventDefault(); smoothScroll('#about');">About</a>
+        <a href="#about" onclick="event.preventDefault(); smoothScroll('#about');" class="active">About</a>
         <a href="#services" onclick="event.preventDefault(); smoothScroll('#services');">Services</a>
         <a href="#testimonies" onclick="event.preventDefault(); smoothScroll('#testimonies');">Testimonies</a>
         <a href="#faq" onclick="event.preventDefault(); smoothScroll('#faq');">FAQ</a>
@@ -24,7 +24,19 @@
             behavior: "smooth"
         });
     }
+
+    function toggleButtonText() {
+        var button = document.getElementById("joinButton");
+        if (button.innerHTML === "Join") {
+            button.innerHTML = "Login";
+        } else {
+            button.innerHTML = "Join";
+        }
+    }
 </script>
+
+<script src="js/navigation.js"></script>
+
 
 <style>
     @keyframes shake {
@@ -77,8 +89,18 @@
         animation: shake 0.5s infinite;
         animation-iteration-count: 1;
     }
+
+    .login-icon {
+        transition: transform 0.3s ease;
+    }
+
+    .login-icon:hover {
+        animation: pulse 3s infinite ease;
+        transition: transform 0.3s ease-out;
+    }
+
+    .login-icon:active {
+        animation: shake 2s infinite;
+        animation-iteration-count: 1;
+    }
 </style>
-
-
-
-

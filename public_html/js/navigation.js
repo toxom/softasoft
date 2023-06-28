@@ -13,7 +13,12 @@ function setActiveLink() {
   const sections = document.querySelectorAll("section");
 
   // Get all the navigation links
-  const navLinks = document.querySelectorAll("#header a, #sidenav a");
+  const navLinks = document.querySelectorAll("#header a, #sidenav a, #toolnav a");
+
+  // Remove the "selected" class from all navigation links
+  navLinks.forEach((navLink) => {
+    navLink.classList.remove("selected");
+  });
 
   // Iterate over each section
   sections.forEach((section) => {
@@ -24,20 +29,12 @@ function setActiveLink() {
     if (isInViewport(section)) {
       // Add the "selected" class to the corresponding navigation link
       navLink.classList.add("selected");
-    } else {
-      // Remove the "selected" class from other navigation links
-      navLink.classList.remove("selected");
     }
   });
 }
 
 // Attach the setActiveLink function to the scroll event
 window.addEventListener("scroll", setActiveLink);
-
-// Function to calculate the easing value based on time
-function easeInOutQuad(t) {
-  return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
-}
 
 // Smooth scrolling function with custom easing
 function smoothScroll(target) {
@@ -50,7 +47,7 @@ function smoothScroll(target) {
 
     function scroll() {
       const elapsed = performance.now() - startTime;
-      const progress = easeInOutQuad(Math.min(elapsed / duration, 1));
+      const progress = Math.min(elapsed / duration, 1);
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       const currentPosition = scrollTop + progress * (targetOffset - scrollTop);
 
@@ -77,27 +74,21 @@ document.querySelectorAll('#header a, #sidenav a').forEach((anchor) => {
   });
 });
 
-// Get all the navigation links inside the side navigation menu
-const sideNavLinks = document.querySelectorAll("#sidenav a");
+// Get the sidenav element
+const sidenavElement = document.querySelector("#sidenav");
 
-// Save the original text of each link
-sideNavLinks.forEach(link => {
-  link.dataset.originalText = link.textContent;
+// Toggle sidenav when mouse enters or leaves
+sidenavElement.addEventListener("mouseenter", () => {
+  sidenavElement.classList.add("open");
 });
 
-// When mouse enters the side navigation menu
-document.querySelector("#sidenav").addEventListener("mouseenter", () => {
-  sideNavLinks.forEach(link => {
-    link.textContent = link.dataset.originalText;  // Restore the original text
-    link.style.transition = "transform 0.1s cubic-bezier(0.25, 0.46, 0.75, 0.94)"; // Add the transition with a faster and more non-linear easing
-  });
+sidenavElement.addEventListener("mouseleave", () => {
+  sidenavElement.classList.remove("open");
 });
 
-// When mouse leaves the side navigation menu
-document.querySelector("#sidenav").addEventListener("mouseleave", () => {
-  sideNavLinks.forEach(link => {
-    link.textContent = link.dataset.originalText.charAt(0);  // Only display the first letter
-    link.style.transition = "transform 0.1s cubic-bezier(0.25, 0.46, 0.75, 0.94)"; // Add the transition with a faster and more non-linear easing
-  });
-});
+function toggleLoginContainer() {
+  const loginContainer = document.getElementById("loginContent");
+  loginContainer.classList.toggle("hidden");
+}
+
 

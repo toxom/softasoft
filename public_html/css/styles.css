@@ -1,5 +1,3 @@
-/* styles.css */
-
 /* Additional styles for the top section/navigation */
 #header {
     position: fixed;
@@ -17,85 +15,128 @@
     z-index: 1;
     color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a box shadow */
-}
-
-#header a:hover {
+  }
+  
+  #header a:hover {
     background-color: aquamarine;
-    #color: darkcyan; /* Change the text color on hover */
+    color: darkcyan; /* Change the text color on hover */
     transition: background-color 0.3s ease-in-out; /* Apply a transition effect */
-}
-
-#header a:active {
+  }
+  
+  #header a:active {
     background-color: red;
-    #color: green; /* Change the text color on hover */
+    color: green; /* Change the text color on hover */
     transition: background-color 0.3s ease-in-out; /* Apply a transition effect */
-}
-
-@keyframes fadeInNav {
+  }
+  
+  @keyframes fadeInNav {
     from {
-        opacity: 0;
+      opacity: 0;
     }
     to {
-        opacity: 1;
+      opacity: 1;
+    }
+  }
+
+  @keyframes shake {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+      transform: translateX(-2px);
+    }
+    20%, 40%, 60%, 80% {
+      transform: translateX(2px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
     }
 }
 
-#header h1 {
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+  
+  #header h1,
+  #header h2 {
     margin: center;
     font-family: "Century Gothic", Arial, sans-serif;
     margin-right: 20px;
-}
-
-#header ul {
+  }
+  
+  #header ul {
     visibility: visible;
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
     align-items: center;
-}
-
-#header li {
+  }
+  
+  #header li {
     margin-right: 10px;
-}
-
-#header li:last-child {
+  }
+  
+  #header li:last-child {
     margin-right: 0;
-}
-
-#header a {
+  }
+  
+  #header a {
     text-decoration: none;
     text-transform: lowercase;
     color: gray;
     font-family: "Century Gothic", Arial, sans-serif;
     font-weight: 600;
     transition: font-weight 0.3s ease-in-out;
-}
-
-
-
-#header a:hover {
+  }
+  
+  #header a:hover {
     text-transform: lowercase;
-    color: darkcyan
+    color: darkcyan;
     transition: color 0.3s ease-in-out; /* Apply a transition effect */
-}
-
-#header a.selected {
+  }
+  
+  #header a.selected {
     text-transform: lowercase;
     color: darkcyan;
     font-weight: 600;
-    transition: color 0.3.s ease-in-out;;
-}
+    transition: color 0.3s ease-in-out;
+  }
 
-/* Update background to white */
-body {
-    background-color: white;
+ /* Adjust margins for the logo in the header */
+#header .logo {
+    margin-left: -60px; /* Adjust the left margin as needed */
+    margin-right: 0px; /* Adjust the right margin as needed */
+}
+ 
+  
+  /* Update background to white */
+  body {
+    background-color: darkcyan;
     margin: 0;
     padding: 0;
-}
-
-/* Add some basic styles for the sections */
-section {
+  }
+  
+  /* Add some basic styles for the sections */
+  section {
     padding: 50px;
     margin-bottom: 20px;
     display: flex;
@@ -105,140 +146,237 @@ section {
     opacity: 0;
     animation: fadeInSection 1s ease-in forwards;
     height: 800px; /* Set the height to 800 pixels */
-    background-color: white; /* Change background color to white */
+  }
+  
+  section#login {
+    margin-top: 20px; /* Adjust the margin value as needed */
 }
 
-section#about {
-    margin-top: 80px; /* Add margin above the about section */
-}
 
-@keyframes fadeInSection {
+  section#login h2 {
+    margin: center;
+    font-family: "Century Gothic", Arial, sans-serif;
+    margin-right: 20px;
+    color: darkcyan;
+  }
+  
+  section#login h3 {
+    margin: center;
+    font-family: "Century Gothic", Arial, sans-serif;
+    margin-left: 10px;
+    text-align: center;
+    color: white !important; /* Add !important to override other conflicting styles */
+  }
+  
+  section#login h4 {
+    margin: center;
+    font-family: "Century Gothic", Arial, sans-serif;
+    margin-right: 12px;
+  }
+  
+  section#login h3 a {
+    color: white; /* Add this rule to set the color for the hyperlink text */
+    background-color: #4034AC;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid lightcyan;
+    border: 1px solid darkcyan;
+
+  }
+  
+  section#login h3 a:hover {
+    color: black; /* Add this rule to set the color for the hyperlink text */
+    background-color: white;
+    border: 1px solid darkcyan;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  section#about {
+    margin-top: 50px; /* Add margin above the about section */
+  }
+  
+  @keyframes fadeInSection {
     from {
-        opacity: 0;
+      opacity: 0;
     }
     to {
-        opacity: 1;
+      opacity: 1;
     }
-}
-
-section h2 {
+  }
+  
+  section h2 {
     margin-top: 20px;
     font-family: "Century Gothic", Arial, sans-serif;
     margin-bottom: 20px;
     color: black; /* Change text color to black */
-}
-
-section p {
+  }
+  
+  section p {
     margin-bottom: 0;
     font-family: "Century Gothic", Arial, sans-serif;
     margin-bottom: 20px;
     color: black; /* Change text color to black */
-}
-
-section:not(:first-of-type) {
+  }
+  
+  section:not(:first-of-type) {
     margin-top: 60px;
-}
+  }
 
-/* Styles for the footer */
-footer {
+  section#login {
+    margin-top: 0px; /* Increase the margin value to reduce the gap */
+  }
+  
+  
+  /* Styles for the footer */
+  footer {
     background-color: darkcyan;
     padding: 20px;
     color: white;
     text-align: center;
     font-family: "Century Gothic", Arial, sans-serif;
-}
-
-footer p {
+  }
+  
+  footer p {
     margin-top: 10px;
-}
-
-/* Styles for the footer links */
-footer ul {
+  }
+  
+  /* Styles for the footer links */
+  footer ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
-}
-
-footer li {
+  }
+  
+  footer li {
     margin-right: 10px;
-}
-
-footer a {
+  }
+  
+  footer a {
     text-decoration: none;
     color: white;
-}
-
-footer a:hover {
+  }
+  
+  footer a:hover {
     text-decoration: underline;
-}
+  }
 
-/* Styles for the side navigation bar */
-.sidenav {
+  
+  
+  
+  /* Styles for the side navigation bar */
+  .sidenav {
     height: 100%;
-    width: 50px;
+    margin-top: 0px;
+    width: 80px;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: black;
     overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    text-align: center;  /* Added to center the text */
-}
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
+    overflow-y: auto;
+    transition: width 0.3s, left 0.3s;
+    text-align: left; /* Added to center the text */
+  }
+  
+  .sidenav a {
+    padding: 8px 0;
     text-decoration: none;
     font-size: 25px;
     color: #818181;
     display: block;
     transition: 0.3s;
-    padding: 8px 0;  /* Adjusted to align the text vertically */
-}
-
-.sidenav a .nav-long {
-    display: none;  /* Hidden by default */
-}
-
-.sidenav a:hover {
-    background-color: darkcyan;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a box shadow */
-
-}
-
-.sidenav:hover {
+    
+  }
+  
+  .sidenav a .nav-long {
+    display: none;
+  }
+  
+  .sidenav:active {
     width: 300px;
+    background-color: blue;
+    transition: width 0.3s;
+    color: #818181;
+    backdrop-filter: blur(50px);
+    
+    
+  }
+  
+  
+
+  
+  
+  /* Add styles for the sidenav links */
+  .sidenav a:hover {
+    margin-top:0px;
+    top: 50;
+
+    color: #818181;
     background-color: darkcyan;
-    transition: 0.3s;
+    transition: background-color 0.3s;
+  }
+  
+  .sidenav:hover {
+    width: 330px;
+    z-index: 3;
+    background-color: black;   
+    transition: width 0.3s;
+    color: #818181;
+    backdrop-filter: blur(10px); /* Add blur effect */
 
-}
+  }
 
-.sidenav:hover a .nav-long {
-    display: inline;  /* Displayed when the side nav is expanded */
-    background-color: cyan;
+/* Add a class to the login-container when sidenav is not hovered */
+.sidenav:not(:hover) .login-container {
+    display: none;
+  }
+  
+  
+  
+  .sidenav:hover a .nav-long {
+    display: inline;
+  }
 
-}
+  
 
-
-.search-container {
+  /* Hide the scrollbar for the sidenav */
+.sidenav::-webkit-scrollbar {
+    width: 0.5em;
+  }
+  
+  .sidenav::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  
+  .sidenav::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+  
+  .sidenav::-webkit-scrollbar-thumb:hover {
+    background-color: transparent;
+  }
+  
+  
+  .search-container {
     display: flex;
     justify-content: center;
     padding: 20px;
     margin-right: 20px;
-
-}
-
-.search-container input[type=text] {
+  }
+  
+  .search-container input[type="text"] {
     padding: 6px;
     margin-top: 8px;
     font-size: 17px;
     border: none;
-}
-
-.search-container button {
+  }
+  
+  .search-container button {
     padding: 6px 10px;
     margin-top: 8px;
     margin-left: 10px;
@@ -246,82 +384,110 @@ footer a:hover {
     font-size: 17px;
     border: none;
     cursor: pointer;
-}
-
-.search-container button:hover {
+  }
+  
+  .search-container button:hover {
     background: #ccc;
+  }
+  
+  .login-container {
+    margin-top: 0;
+    color: red;
+    
 }
-
-/* Add styles for the login/registration form */
-.login-container form input[type="email"],
-.login-container form input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    font-size: 16px;
-    border: 1px solid lightgray;
-    border-radius: px;
-    background-color: white;
-}
-
-.login-container form button {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 20px;
-    background-color: lightgray;
+  /* Add styles for the login/registration form */
+  .login-container form input[type="email"],
+  .login-container form input[type="password"] {
+    width: 250px;
+    padding: 10px 10px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+    font-family: "Century Gothic", Arial, sans-serif;
+    font-size: 20px;
+    background-color: lightcyan;
+    border: 1px solid;
+    border-radius: 10px;
+  }
+  
+  .login-container form button {
+    width: 270px;
+    padding: 10px 10px;
+    margin-left: 0px;
+    font-family: "Century Gothic", Arial, sans-serif;
+    font-size: 20px;
+    border: 1px solid darkcyan;
+    border-radius: 10px;
+    background-color: darkcyan;
     cursor: pointer;
-}
+  }
+  
+  .login-container form button:hover {
+    background-color: lightcyan;
+  }
 
-.login-container form button:hover {
-    background-color: darkgray;
-}
+  .login-container form input:hover {
+    background-color: white;
+  }
 
-
-/* Styles for the new right sidenav */
-#pronav {
-    height: 100%;
-    width: 50px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0; /* Align the sidenav to the right */
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    text-align: center;
-}
-
-#pronav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-    padding: 8px 0;
-}
-
-#pronav a .nav-long {
+  
+  #loginContent {
     display: none;
-}
+  }
+  
+  /* Default state for login container */
+  .sidenav:not(:hover) ~ #loginContent {
+    display: none;
+  }
 
-#pronav a:hover {
-    color: #f1f1f1;
-}
 
-#pronav:hover {
-    width: 300px;
-    right: 0; /* Ensure the sidenav expands towards the left */
-}
+  #joinButton {
+    position: absolute;
+    top: 25px; /* Align the join button vertically */
+    transform: translateY(-50%);
+    z-index: 3; /* Increase z-index to appear on top of the sidenav */
+    left: 5px; /* Adjust the left position as needed */
+  }
 
-#pronav:hover a .nav-long {
-    display: inline;
-}
+  .button-join {
+    width: 70px;
+    height: 50px;
+    margin-left: 20x;
+    margin-right: 20px;
+    font-family: "Century Gothic", Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    justify-content: center;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Add transition properties */
 
-.slide-left {
-    transition: transform 0.5s ease;
-}
+  }
+  
+  .button-join:hover {
+    background-color: lightcyan;
+    color: black;
+    transition: background-color 0.3s, color 0.3s; /* Add transition properties */
 
-``
+
+  }
+
+  .button-join:active {
+    transform: scale(0.8); /* Add transform property for scaling */
+    color: darkcyan;
+    background-color: red;
+    transition: background-color 0.3s, color 0.3s; /* Add transition properties */
+    animation: pulse 1s ease;
+    transition: transform 0.3s ease-out;
+
+
+  }
+
+
+
+
+  
+  /* ... Other styles */
+  
