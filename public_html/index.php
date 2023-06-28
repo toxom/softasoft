@@ -1,3 +1,6 @@
+<?php
+// @language=php
+?>
 <!DOCTYPE html>
 <html>
 <head>
