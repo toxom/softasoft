@@ -1,4 +1,5 @@
 <section id="login">
+    <button id="joinButton" class="button-join" onclick="toggleButtonText()">Join</button>
     <div class="login-container login-content">
         <form action="credentials.php" method="post">
             <input type="email" name="email" placeholder="Email" required>

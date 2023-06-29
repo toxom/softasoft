@@ -1,6 +1,3 @@
-<?php
-// @language=php
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,11 +10,6 @@
     <link rel="stylesheet" href="css/components/header.css">
     <link rel="stylesheet" href="css/components/login.css">
     <link href="https://fonts.googleapis.com/css2?family=Century+Gothic&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-color: #4034AC;
-        }
-    </style>
     <!-- Include other CSS files and meta tags as needed -->
 </head>
 
@@ -32,15 +24,13 @@
     <div id="toolnav" class="sidenav">
         <?php include 'components/login.php'; ?>
     </div>
-
+    
     <?php include 'pages/about.php'; ?>
     <?php include 'pages/services.php'; ?>
-    <?php include 'pages/testimonies.php'; ?>
-    <?php include 'pages/faq.php'; ?>
     <?php include 'pages/contact.php'; ?>
 
 
-    <?php include 'components/footer.php'; ?>
+
 
     <script src="js/navigation.js"></script>
 </body>

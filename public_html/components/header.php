@@ -7,7 +7,9 @@
         <a href="#services" onclick="event.preventDefault(); smoothScroll('#services');">Services</a>
         <a href="#testimonies" onclick="event.preventDefault(); smoothScroll('#testimonies');">Testimonies</a>
         <a href="#faq" onclick="event.preventDefault(); smoothScroll('#faq');">FAQ</a>
-        <a href="#contact" onclick="event.preventDefault(); smoothScroll('#contact');">Contact</a>
+
+        <a href="#contact" alt="Contact" onclick="scrollToTop('#contact')" class="contact">Contact</a>
+
     </div>
     <div class="search-container" style="display: none;">
         <form action="/search.php" method="post">
@@ -16,7 +18,7 @@
         </form>
     </div>
 </header>
-
+<img src="assets/logos/logos.svg" alt="Logo" onclick="scrollToTop()" class="logo">
 <script>
     function scrollToTop() {
         window.scrollTo({
@@ -90,17 +92,4 @@
         animation-iteration-count: 1;
     }
 
-    .login-icon {
-        transition: transform 0.3s ease;
-    }
-
-    .login-icon:hover {
-        animation: pulse 3s infinite ease;
-        transition: transform 0.3s ease-out;
-    }
-
-    .login-icon:active {
-        animation: shake 2s infinite;
-        animation-iteration-count: 1;
-    }
 </style>

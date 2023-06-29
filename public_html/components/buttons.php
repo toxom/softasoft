@@ -8,6 +8,7 @@
   .button-join.login::after {
     content: "Login";
   }
+  
 </style>
 
 <script>

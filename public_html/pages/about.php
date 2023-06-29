@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>About Page</title>
+    <title>About</title>
     <link rel="stylesheet" href="path/to/styles.css">
     <!-- Include other CSS files and meta tags as needed -->
     <style>
@@ -33,12 +33,30 @@
             100% { transform: scale(1); }
         }
 
+        h1 {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 24px;
+            font-weight: 500;
+            color: #4034AC;
+        }
+
         body {
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
             font-size: 20px;
             font-weight: 300;
             color: white;
+            background-color: #6F00DE;
+            flex-direction:row;
+            justify-content: flex-start;
+            align-items: center;
+            opacity: 0;
+            position: center;
+            animation: fadeInSection 1s ease-in forwards;
+            height: 800px;
+            border-radius: 10px; /* Add border-radius property for rounded edges */
         }
+
+
 
         h2 {
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -115,49 +133,34 @@
 
     </style>
     <!-- Include other CSS files and meta tags as needed -->
-
-    <div style="text-align: center; ">
-        <strong><img src="assets/logos/logos.svg" alt="Logo" onclick="scrollToTop()" class="logo"></strong>
-        <p>Cпорим, этоты в будущем?</p>
-    </div>
-
-
-    <div style="text-align: center; ">
-        <body>Он уже достиг всех твоих целей, потому что поспорил с нами А ты рискнешь?</body>
-    </div>
-
 </head>
+
 <body>
-<section id="about" style="background-color: #4034AC; color: #fff; padding: 20px; margin-left: 400px;">
-    <img src="assets/illustrations/corpart1.svg" alt="Logo" onclick="animateAboutContent(this)" onmouseover="addHoverAnimation(this)" onmouseout="removeHoverAnimation(this)" class="corpart click-animation">
-</section>
-<!-- Include other HTML content and scripts as needed -->
+    <div class="about" style="text-align: center;">
+        <img src="assets/logos/logos.svg" alt="Logo" onclick="scrollToTop()" class="logo">
+        <p>Cпорим, этоты в будущем?</p>
+        <img src="assets/illustrations/corpart1.svg" alt="Logo" onclick="animateAboutContent(this)" onmouseover="addHoverAnimation(this)" onmouseout="removeHoverAnimation(this)" class="corpart click-animation">
+        <p>Он уже достиг всех твоих целей, потому что поспорил с нами. А ты рискнешь?</p>
+    </div>
 
-<script>
-    function animateAboutContent(element) {
-        element.classList.add('click-animation');
-        setTimeout(function() {
-            element.classList.remove('click-animation');
-        }, 200);
-    }
 
-    function toggleText(element) {
-        var pElement = document.querySelector('p');
-        if (pElement.textContent === 'Cпорим, этоты в будущем?') {
-            pElement.textContent = 'Text Changed!';
-        } else {
-            pElement.textContent = 'Cпорим, этоты в будущем?';
+    <!-- Include other HTML content and scripts as needed -->
+
+    <script>
+        function animateAboutContent(element) {
+            element.classList.add('click-animation');
+            setTimeout(function() {
+                element.classList.remove('click-animation');
+            }, 200);
         }
-    }
 
-    function addHoverAnimation(element) {
-        element.classList.add('hover-animation');
-    }
+        function addHoverAnimation(element) {
+            element.classList.add('hover-animation');
+        }
 
-    function removeHoverAnimation(element) {
-        element.classList.remove('hover-animation');
-    }
-</script>
-
+        function removeHoverAnimation(element) {
+            element.classList.remove('hover-animation');
+        }
+    </script>
 </body>
 </html>
