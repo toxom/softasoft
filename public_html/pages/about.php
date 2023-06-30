@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
     <title>About</title>
     <link rel="stylesheet" href="path/to/styles.css">
@@ -76,7 +78,7 @@
 
 
         }
-        
+
         @keyframes scaleEffect {
             0% {
                 transform: scale(1);
@@ -108,7 +110,7 @@
             color: darkcyan; /* Change the text color on hover */
             transition: background-color 0.2s ease-in-out; /* Apply a transition effect */
             transform: scale(1.1);
-            animation: scaleEffect 0.2s ease; 
+            animation: scaleEffect 0.2s ease;
             transition: color 0.2s ease-in-out; /* Apply a transition effect */
 
 
@@ -136,12 +138,15 @@
 </head>
 
 <body>
-    <div class="about" style="text-align: center;">
+    <section class="about" style="text-align: center;">
         <img src="assets/logos/logos.svg" alt="Logo" onclick="scrollToTop()" class="logo">
         <p>Cпорим, этоты в будущем?</p>
         <img src="assets/illustrations/corpart1.svg" alt="Logo" onclick="animateAboutContent(this)" onmouseover="addHoverAnimation(this)" onmouseout="removeHoverAnimation(this)" class="corpart click-animation">
         <p>Он уже достиг всех твоих целей, потому что поспорил с нами. А ты рискнешь?</p>
-    </div>
+    </section>
+
+</body>
+
 
 
     <!-- Include other HTML content and scripts as needed -->

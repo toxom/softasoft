@@ -77,7 +77,7 @@
 
 
         }
-        
+
         @keyframes scaleEffect {
             0% {
                 transform: scale(1);
@@ -109,7 +109,7 @@
             color: darkcyan; /* Change the text color on hover */
             transition: background-color 0.2s ease-in-out; /* Apply a transition effect */
             transform: scale(1.1);
-            animation: scaleEffect 0.2s ease; 
+            animation: scaleEffect 0.2s ease;
             transition: color 0.2s ease-in-out; /* Apply a transition effect */
 
 
@@ -134,7 +134,7 @@
             color: darkcyan; /* Change the text color on hover */
             transition: background-color 0.2s ease-in-out; /* Apply a transition effect */
             transform: scale(0.8);
-            animation: scaleEffect 0.2s ease; 
+            animation: scaleEffect 0.2s ease;
             transition: color 0.2s ease-in-out; /* Apply a transition effect */
             margin-left: 20px;
 
@@ -191,3 +191,5 @@
     </script>
 </body>
 </html>
+
+

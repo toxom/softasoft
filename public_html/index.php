@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Home Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,16 +23,27 @@
     </div>
 
     <div id="toolnav" class="sidenav">
-        <?php include 'components/login.php'; ?>
+
     </div>
-    
-    <?php include 'pages/about.php'; ?>
-    <?php include 'pages/services.php'; ?>
-    <?php include 'pages/contact.php'; ?>
 
+    <div id="about">
+        <div class="about-content">
+            <?php include 'pages/about.php'; ?>
+        </div>
+        <div class="cta-content">
+            <?php include 'components/cta.php'; ?>
+        </div>
+    </div>
 
+    <div id="services">
+        <?php include 'pages/services.php'; ?>
+    </div>
 
+    <div id="contact">
+        <?php include 'pages/contact.php'; ?>
+    </div>
 
     <script src="js/navigation.js"></script>
 </body>
+
 </html>

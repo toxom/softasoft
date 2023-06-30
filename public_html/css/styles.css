@@ -16,19 +16,19 @@
     color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a box shadow */
   }
-  
+
   #header a:hover {
     background-color: aquamarine;
     color: darkcyan; /* Change the text color on hover */
     transition: background-color 0.3s ease-in-out; /* Apply a transition effect */
   }
-  
+
   #header a:active {
     background-color: red;
     color: green; /* Change the text color on hover */
     transition: background-color 0.3s ease-in-out; /* Apply a transition effect */
   }
-  
+
   @keyframes fadeInNav {
     from {
       opacity: 0;
@@ -74,14 +74,14 @@
     }
 }
 
-  
+
   #header h1,
   #header h2 {
     margin: center;
     font-family: "Century Gothic", Arial, sans-serif;
     margin-right: 20px;
   }
-  
+
   #header ul {
     visibility: visible;
     list-style-type: none;
@@ -90,15 +90,15 @@
     display: flex;
     align-items: center;
   }
-  
+
   #header li {
     margin-right: 10px;
   }
-  
+
   #header li:last-child {
     margin-right: 0;
   }
-  
+
   #header a {
     text-decoration: none;
     text-transform: lowercase;
@@ -107,13 +107,13 @@
     font-weight: 600;
     transition: font-weight 0.3s ease-in-out;
   }
-  
+
   #header a:hover {
     text-transform: lowercase;
     color: darkcyan;
     transition: color 0.3s ease-in-out; /* Apply a transition effect */
   }
-  
+
   #header a.selected {
     text-transform: lowercase;
     color: darkcyan;
@@ -126,16 +126,16 @@
     margin-left: -60px; /* Adjust the left margin as needed */
     margin-right: 0px; /* Adjust the right margin as needed */
 }
- 
-  
+
+
   /* Update background to white */
   .body {
-    background-color: black;    
+    background-color: black;
     margin: 0;
     padding: 0;
-    
+
   }
-  
+
   /* Add some basic styles for the sections */
   section {
     padding: 50px;
@@ -147,14 +147,14 @@
     align-items: center;
     opacity: 0;
     animation: fadeInSection 1s ease-in forwards;
-    height: 1000px; /* Set the height to 800 pixels */
-    color: transparent;
-    background-color: transparent;
+    height: 400px; /* Set the height to 800 pixels */
   }
-  
-  section#login {
-    margin-top: 20px; /* Adjust the margin value as needed */
-}
+
+  section#login .login-container {
+    margin-top: -50px; /* Adjust the margin-top value to move the container higher */
+    padding-top: 50px; /* Adjust the padding-top value to maintain the spacing */
+  }
+
 
 
   section#login h2 {
@@ -163,7 +163,7 @@
     margin-right: 20px;
     color: darkcyan;
   }
-  
+
   section#login h3 {
     margin: center;
     font-family: "Century Gothic", Arial, sans-serif;
@@ -171,13 +171,13 @@
     text-align: center;
     color: white !important; /* Add !important to override other conflicting styles */
   }
-  
+
   section#login h4 {
     margin: center;
     font-family: "Century Gothic", Arial, sans-serif;
     margin-right: 12px;
   }
-  
+
   section#login h3 a {
     color: white; /* Add this rule to set the color for the hyperlink text */
     background-color: #4034AC;
@@ -187,7 +187,7 @@
     border: 1px solid darkcyan;
 
   }
-  
+
   section#login h3 a:hover {
     color: black; /* Add this rule to set the color for the hyperlink text */
     background-color: white;
@@ -196,15 +196,13 @@
     cursor: pointer;
     font-weight: bold;
   }
-  
-  section#about {
-    margin-top: 50px; /* Add margin above the about section */
-    background-color: transparent; 
-    border: 2px;
-    margin-top: 20px;   
 
+  section#about {
+    margin-top: 0px; /* Add margin above the about section */
+    background-color: transparent;
+    border: 2px;
   }
-  
+
   @keyframes fadeInSection {
     from {
       opacity: 0;
@@ -213,21 +211,29 @@
       opacity: 1;
     }
   }
-  
+
   section h2 {
     margin-top: 20px;
     font-family: "Century Gothic", Arial, sans-serif;
     margin-bottom: 20px;
     color: black; /* Change text color to black */
   }
-  
+
+  section h3 {
+    margin-top: 20px;
+    font-family: "Century Gothic", Arial, sans-serif;
+    margin-bottom: 20px;
+    color: black; /* Change text color to black */
+  }
+
+
   section p {
     margin-bottom: 0;
     font-family: "Century Gothic", Arial, sans-serif;
     margin-bottom: 20px;
     color: black; /* Change text color to black */
   }
-  
+
   section:not(:first-of-type) {
     margin-top: 60px;
   }
@@ -235,8 +241,8 @@
   section#login {
     margin-top: 0px; /* Increase the margin value to reduce the gap */
   }
-  
-  
+
+
   /* Styles for the footer */
   footer {
     background-color: darkcyan;
@@ -245,11 +251,11 @@
     text-align: center;
     font-family: "Century Gothic", Arial, sans-serif;
   }
-  
+
   footer p {
     margin-top: 10px;
   }
-  
+
   /* Styles for the footer links */
   footer ul {
     list-style-type: none;
@@ -258,30 +264,30 @@
     display: flex;
     justify-content: center;
   }
-  
+
   footer li {
     margin-right: 10px;
   }
-  
+
   footer a {
     text-decoration: none;
     color: white;
   }
-  
+
   footer a:hover {
     text-decoration: underline;
   }
 
-  
-  
-  
+
+
+
   /* Styles for the side navigation bar */
   .sidenav {
     height: 100%;
     margin-top: 0px;
     width: 80px;
     position: fixed;
-    z-index: 1;
+    z-index: 0;
     top: 0;
     left: 0;
     background-color: black;
@@ -290,7 +296,7 @@
     transition: width 0.3s, left 0.3s;
     text-align: left; /* Added to center the text */
   }
-  
+
   .sidenav a {
     padding: 8px 0;
     text-decoration: none;
@@ -298,41 +304,53 @@
     color: #818181;
     display: block;
     transition: 0.3s;
-    
+
   }
-  
+
+  .sidenav.open {
+    padding: 8px 0;
+    text-decoration: none;
+    font-size: 25px;
+    color: #red;
+    display: block;
+    transition: 0.3s;
+
+  }
+
   .sidenav a .nav-long {
     display: none;
   }
-  
+
+
+
   .sidenav:active {
     width: 300px;
     background-color: blue;
     transition: width 0.3s;
     color: #818181;
     backdrop-filter: blur(50px);
-    
-    
-  }
-  
-  
 
-  
-  
+
+  }
+
+
+
+
+
   /* Add styles for the sidenav links */
   .sidenav a:hover {
     margin-top:0px;
     top: 50;
-
     color: #818181;
     background-color: darkcyan;
     transition: background-color 0.3s;
   }
-  
+
   .sidenav:hover {
     width: 330px;
+    isolation: isolate;
     z-index: 3;
-    background-color: black;   
+    background-color: black;
     transition: width 0.3s;
     color: #818181;
     backdrop-filter: blur(10px); /* Add blur effect */
@@ -340,50 +358,56 @@
   }
 
 /* Add a class to the login-container when sidenav is not hovered */
+
+/* Default state for login container */
 .sidenav:not(:hover) .login-container {
-    display: none;
-  }
-  
-  
-  
+  display: none;
+}
+
+.sidenav:not(:hover) .login-container {
+  display: none;
+}
+
+
+
   .sidenav:hover a .nav-long {
     display: inline;
   }
 
-  
+
 
   /* Hide the scrollbar for the sidenav */
 .sidenav::-webkit-scrollbar {
     width: 0.5em;
   }
-  
+
   .sidenav::-webkit-scrollbar-track {
     background-color: transparent;
   }
-  
+
   .sidenav::-webkit-scrollbar-thumb {
     background-color: transparent;
   }
-  
+
   .sidenav::-webkit-scrollbar-thumb:hover {
     background-color: transparent;
   }
-  
-  
+
+
   .search-container {
     display: flex;
     justify-content: center;
     padding: 20px;
     margin-right: 20px;
   }
-  
+
   .search-container input[type="text"] {
     padding: 6px;
     margin-top: 8px;
     font-size: 17px;
     border: none;
   }
-  
+
   .search-container button {
     padding: 6px 10px;
     margin-top: 8px;
@@ -393,16 +417,17 @@
     border: none;
     cursor: pointer;
   }
-  
+
   .search-container button:hover {
     background: #ccc;
   }
-  
+
   .login-container {
-    margin-top: 0;
-    color: red;
-    
-}
+    margin-top: -50px; /* Adjust the margin value to move the container higher */
+    padding-top: 50px; /* Adjust the padding value to maintain the spacing */
+  }
+
+
   /* Add styles for the login/registration form */
   .login-container form input[type="email"],
   .login-container form input[type="password"] {
@@ -417,7 +442,7 @@
     border: 1px solid;
     border-radius: 10px;
   }
-  
+
   .login-container form button {
     width: 270px;
     padding: 10px 10px;
@@ -429,7 +454,7 @@
     background-color: darkcyan;
     cursor: pointer;
   }
-  
+
   .login-container form button:hover {
     background-color: lightcyan;
   }
@@ -438,15 +463,11 @@
     background-color: white;
   }
 
-  
+
   #loginContent {
     display: none;
   }
-  
-  /* Default state for login container */
-  .sidenav:not(:hover) ~ #loginContent {
-    display: none;
-  }
+
 
 
   #joinButton {
@@ -472,7 +493,7 @@
     transition: background-color 0.3s, color 0.3s; /* Add transition properties */
 
   }
-  
+
   .button-join:hover {
     background-color: lightcyan;
     color: black;
@@ -505,7 +526,7 @@
     margin-top: 0px;
     margin-left: 20px;
     margin-right:20px;
-    
+
 
       /* Center the container */
     position: absolute;
@@ -513,15 +534,29 @@
     left: 48%;
     transform: translate(-50%, -50%);
     }
-  
+
 
   /* Customize other styles within the frame container */
   .frame-container p {
     color: #000000;
     font-size: 18px;
   }
-  
 
-  
+  .about-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  #about {
+    display: flex;
+    justify-content: space-between;
+  }
+
+.about-content, .cta-content {
+    flex-basis: 50%;
+  }
+
+
   /* ... Other styles */
-  
