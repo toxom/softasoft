@@ -150,8 +150,7 @@ document.querySelectorAll('#header a, #sidenav a').forEach((anchor) => {
   });
 });
 
-// Get the sidenav element
-const sidenavElement = document.querySelector("#sidenav");
+
 
 // Function to open the side navigation
 function openSideNav() {
@@ -178,5 +177,58 @@ function toggleLoginContainer() {
 
   const loginSection = document.getElementById("login");
   loginSection.classList.toggle("hidden"); // Add this line to toggle the visibility of the login section
+}
+
+// Function to scroll to the next section
+function scrollToNextSection() {
+  const sections = document.querySelectorAll("section");
+  const currentSection = Array.from(sections).find((section) =>
+    isInViewport(section)
+  );
+
+  if (currentSection) {
+    const nextSection = currentSection.nextElementSibling;
+
+    if (nextSection) {
+      smoothScroll(`#${nextSection.id}`);
+    }
+  }
+}
+
+// Attach the scrollToNextSection function to the wheel event
+window.addEventListener("wheel", (event) => {
+  if (event.deltaY > 0) {
+    // Scroll down
+    scrollToNextSection();
+  }
+});
+
+function toggleDashboard() {
+  var dashboard = document.getElementById("dashboard");
+  dashboard.classList.toggle("dashboard-open");
+}
+
+const form = document.getElementById('myForm');
+const steps = Array.from(form.getElementsByClassName('form-step'));
+let currentStep = 0;
+
+function goToNextStep() {
+  if (currentStep < steps.length - 1) {
+    steps[currentStep].classList.remove('current');
+    steps[currentStep + 1].classList.add('current');
+    steps[currentStep].style.animation = 'slideOutLeft 0.5s forwards';
+    steps[currentStep + 1].style.animation = 'slideInRight 0.5s forwards';
+    currentStep++;
+  }
+}
+
+function goToPrevStep() {
+  if (currentStep > 0) {
+    steps[currentStep].classList.remove('current');
+    steps[currentStep - 1].classList.add('current');
+    steps[currentStep].style.animation = 'slideOutRight 0.5s forwards';
+    steps[currentStep - 1].style.animation = 'slideInLeft 0.5s forwards';
+    currentStep--;
+  }
 }
 

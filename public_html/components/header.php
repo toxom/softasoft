@@ -1,7 +1,7 @@
 <header id="header" style="display: flex;">
     <div style="margin-left: 150px;">
         <img src="assets/logos/logos.svg" alt="Logo" onclick="scrollToTop()" class="logo">
-    </div>    
+    </div>
     <div class="section-links" style="margin-left: 10px; margin-right: 10px">
         <a href="#about" onclick="event.preventDefault(); smoothScroll('#about');" class="active">About</a>
         <a href="#services" onclick="event.preventDefault(); smoothScroll('#services');">Services</a>
@@ -11,9 +11,16 @@
         <a href="#contact" alt="Contact" onclick="scrollToTop('#contact')" class="contact">Contact</a>
 
     </div>
-    <div class="search-container" style="display: none;">
+    <div class="search-container" style="display: flex;">
         <form action="/search.php" method="post">
             <input type="text" placeholder="Search.." name="search" maxlength="50">
+        </form>
+    </div>
+    <div class="dashboard-container">
+        <button id="dashboardToggleBtn" onclick="toggleDashboard()">Open Dashboard</button>
+    </div>
+    <div class="registration-container" style="display: flex;">
+        <form action="/pages/registration.php" method="post">
             <button type="submit"><i class="fa fa-search"></i></button>
         </form>
     </div>

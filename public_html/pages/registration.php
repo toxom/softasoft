@@ -19,17 +19,14 @@
     <?php include 'components/navigation.php'; ?>
     
     <div id="sidenav" class="sidenav">
+        <?php include 'components/login.php'; ?>
     </div>
 
     <div id="toolnav" class="sidenav">
-
+        <div class="cta-content">
+            <?php include 'components/cta.php'; ?>
+        </div>
     </div>
-
-    <?php include 'pages/dashboard.php'; ?>
-
-    <?php include 'components/form-container.php'; ?>
-
-
 
     <div id="Banner">
         <?php include 'components/banner.php'; ?>

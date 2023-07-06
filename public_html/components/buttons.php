@@ -4,6 +4,9 @@
 
 <button id="joinButton" class="button-join" onclick="toggleButtonText()" onclick="toggleSidenav()">Join</button>
 
+<button id="dashboardToggleBtn" class="dashboardToggleBtn" onclick="toggleButtonText()" onclick="toggleSidenav()">Join</button>
+
+
 <style>
   .button-join.login::after {
     content: "Login";

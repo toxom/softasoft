@@ -6,7 +6,7 @@
             <input type="password" name="password" placeholder="Password" required>
             <button type="submit">Login</button>
             <h3>Don't have an account?</h3>
-            <h3><a href="register.php">Register</a></h3>
+            <h3><a href="registration.php">Register</a></h3>
         </form>
     </div>
 

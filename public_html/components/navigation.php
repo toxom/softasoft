@@ -1,9 +1,10 @@
 
 <div id="sidenav" class="sidenav">
+    <?php include 'components/login.php'; ?>
 </div>
 
 <div id="toolnav" class="sidenav">
-    <div></div>
+    <?php include 'components/cta.php'; ?>
 </div>
 
 
@@ -11,6 +12,11 @@
     #toolnav {
         right: 0;
         left: auto;
+    }
+
+    #sidenav {
+        right: auto;
+        left: 0;
     }
 
 </style>

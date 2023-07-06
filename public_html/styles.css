@@ -1,3 +1,80 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
+
+@keyframes fadeInNav {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-2px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(0.5);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
+}
+
+body {
+  margin: 0px;
+}
+
+#banner {
+  position: absolute;
+  margin: auto;
+  width: 100vw;
+  height: 80pt;
+  top: 0;
+  bottom: 0;
+
+  filter: url(#threshold) blur(0.6px);
+}
+
+#text1,
+#text2 {
+  position: absolute;
+  width: 100%;
+  display: inline-block;
+
+  font-family: "Raleway", sans-serif;
+  font-size: 80pt;
+
+  text-align: center;
+
+  user-select: none;
+
+}
+
 /* Additional styles for the top section/navigation */
 #header {
     position: fixed;
@@ -17,6 +94,8 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a box shadow */
   }
 
+  
+
   #header a:hover {
     background-color: aquamarine;
     color: darkcyan; /* Change the text color on hover */
@@ -29,50 +108,7 @@
     transition: background-color 0.3s ease-in-out; /* Apply a transition effect */
   }
 
-  @keyframes fadeInNav {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
 
-  @keyframes shake {
-    0%, 100% {
-      transform: translateX(0);
-    }
-    10%, 30%, 50%, 70%, 90% {
-      transform: translateX(-2px);
-    }
-    20%, 40%, 60%, 80% {
-      transform: translateX(2px);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(0.5);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
 
 
   #header h1,
@@ -145,9 +181,17 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    height: auto;
+
     opacity: 0;
     animation: fadeInSection 1s ease-in forwards;
     height: 400px; /* Set the height to 800 pixels */
+
+
+  }
+
+  section#login {
+    margin-top: 0px; /* Increase the margin value to reduce the gap */
   }
 
   section#login .login-container {
@@ -201,6 +245,8 @@
     margin-top: 0px; /* Add margin above the about section */
     background-color: transparent;
     border: 2px;
+    flex-basis: 50%;
+
   }
 
   @keyframes fadeInSection {
@@ -238,9 +284,169 @@
     margin-top: 60px;
   }
 
-  section#login {
-    margin-top: 0px; /* Increase the margin value to reduce the gap */
+
+
+  /* CSS class for the click animation */
+  .click-animation {
+    transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
+
+  /* CSS class for the hover animation */
+  .hover-animation {
+    animation: bounce-hover 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+  }
+
+  /* CSS class for the click animation */
+  .click-animation {
+    animation: bounce-click 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  /* Keyframes for the hover animation */
+  @keyframes bounce-hover {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+
+  /* Keyframes for the click animation */
+  @keyframes bounce-click {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(1); }
+  }
+
+  /* Rest of the CSS styles */
+
+  /* Add keyframes, selectors, and other CSS styles here */
+
+  /* ... Rest of the CSS code */
+
+
+  body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 20px;
+      font-weight: 300;
+      color: white;
+      background-color: #6F00DE;
+      flex-direction:row;
+      justify-content: flex-start;
+      align-items: center;
+      opacity: 0;
+      position: center;
+      animation: fadeInSection 1s ease-in forwards;
+      height: auto;
+      border-radius: 10px; /* Add border-radius property for rounded edges */
+  }
+
+  h1 {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 24px;
+      font-weight: 500;
+      color: #4034AC;
+  }
+
+  p {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 24px;
+      font-weight: 500;
+      color: #4034AC;
+
+  }
+
+  h2 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  color: #4034AC;
+  }
+
+  /* Media query for screens up to 600px wide */
+  @media (max-width: 600px) {
+      h2 {
+          font-size: 20px;
+      }
+      }
+
+  /* Media query for screens between 601px and 1200px wide */
+  @media (min-width: 601px) and (max-width: 1200px) {
+      h2 {
+          font-size: 22px;
+      }
+      }
+
+  /* Media query for screens wider than 1200px */
+  @media (min-width: 1201px) {
+      h2 {
+          font-size: 24px;
+      }
+      }
+
+
+  p {
+      font-family: "Century Gothic", Arial, sans-serif;
+      font-size: 24px;
+      line-height: 1.5;
+      color: white;
+      margin-right: 60px;
+      margin-left: 60px;
+      padding: 10px;
+
+
+  }
+
+  @keyframes scaleEffect {
+      0% {
+          transform: scale(1);
+      }
+      50% {
+          transform: scale(1.5);
+      }
+      100% {
+          transform: scale(1.5);
+      }
+  }
+
+  @keyframes shake {
+      0%, 100% {
+          transform: translateX(0);
+      }
+      10%, 30%, 50%, 70%, 90% {
+          transform: translateX(-10px);
+      }
+      20%, 40%, 60%, 80% {
+          transform: translateX(10px);
+      }
+      100% {
+          transform: translateX(0);
+      }
+  }
+  p:hover {
+      background-color: aquamarine;
+      color: darkcyan; /* Change the text color on hover */
+      transition: background-color 0.2s ease-in-out; /* Apply a transition effect */
+      transform: scale(1.1);
+      animation: scaleEffect 0.2s ease;
+      transition: color 0.2s ease-in-out; /* Apply a transition effect */
+
+
+  }
+
+  p:active {
+      background-color: red;
+      color: darkcyan; /* Change the text color on hover */
+      transition: background-color 0.3s ease-in-out; /* Apply a transition effect */
+      transform: scale(1.3) skewX(30px);
+      animation: scaleEffect 0.2s ease;
+      animation: shake 0.8s ease;
+      transition: color 0.3s ease-in-out; /* Apply a transition effect */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a box shadow */
+      filter: blur(2px); /* Apply a blur effect */
+      filter: hue-rotate(1deg) drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+
+  }
+
+
+
+
+
 
 
   /* Styles for the footer */
@@ -278,7 +484,20 @@
     text-decoration: underline;
   }
 
-
+  .toolnav {
+    height: 100%;
+    margin-top: 0px;
+    width: 80px;
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: width 0.3s, left 0.3s;
+    text-align: left; /* Added to center the text */
+  }
 
 
   /* Styles for the side navigation bar */
@@ -303,7 +522,7 @@
     font-size: 25px;
     color: #818181;
     display: block;
-    transition: 0.3s;
+    transition: 0.2Ss;
 
   }
 
@@ -311,9 +530,9 @@
     padding: 8px 0;
     text-decoration: none;
     font-size: 25px;
-    color: #red;
+    color: red;
     display: block;
-    transition: 0.3s;
+    transition: 0.2s;
 
   }
 
@@ -334,8 +553,15 @@
   }
 
 
+  .sidenav:hover {
+    width: 330px;
+    isolation: isolate;
+    z-index: 3;
+    transition: width 0.3s;
+    color: black;
+    backdrop-filter: blur(10px); /* Add blur effect */
 
-
+  }
 
   /* Add styles for the sidenav links */
   .sidenav a:hover {
@@ -346,16 +572,6 @@
     transition: background-color 0.3s;
   }
 
-  .sidenav:hover {
-    width: 330px;
-    isolation: isolate;
-    z-index: 3;
-    background-color: black;
-    transition: width 0.3s;
-    color: #818181;
-    backdrop-filter: blur(10px); /* Add blur effect */
-
-  }
 
 /* Add a class to the login-container when sidenav is not hovered */
 
@@ -395,31 +611,36 @@
 
 
   .search-container {
-    display: flex;
-    justify-content: center;
+
     padding: 20px;
     margin-right: 20px;
   }
 
   .search-container input[type="text"] {
     padding: 6px;
-    margin-top: 8px;
+    margin-top: 20px;
+    margin-left: 100px;
     font-size: 17px;
     border: none;
   }
 
-  .search-container button {
-    padding: 6px 10px;
-    margin-top: 8px;
-    margin-left: 10px;
-    background: #ddd;
-    font-size: 17px;
-    border: none;
+
+  .registration-container {
+
+    padding: 20px;
+    margin-right: 20px;
+  }
+
+  .registration-container form button {
+    width: 270px;
+    padding: 10px 10px;
+    margin-left: 0px;
+    font-family: "Century Gothic", Arial, sans-serif;
+    font-size: 20px;
+    border: 1px solid darkcyan;
+    border-radius: 10px;
+    background-color: darkcyan;
     cursor: pointer;
-  }
-
-  .search-container button:hover {
-    background: #ccc;
   }
 
   .login-container {
@@ -554,9 +775,205 @@
     justify-content: space-between;
   }
 
-.about-content, .cta-content {
+  .about-content, .cta-content {
     flex-basis: 50%;
+    width: auto;
+    height: auto;
   }
 
 
-  /* ... Other styles */
+  .cycling-tape {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+
+    /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  /* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+  
+  @keyframes tapeAnimation {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transition: s
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+    /* CSS styles for the cycling-type cycle */
+    .cycling-type__cycle {
+      font-weight: bold;
+      text-transform: uppercase;
+      background-color: red;;
+      text-align: center;
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+
+    .cycling-type__cycle.typed-effect {
+      opacity: 1;
+      transition: opacity 0.3s ease;
+
+    
+    }
+  
+    /* CSS styles for the cycling-type after */
+    .cycling-type__after {
+      color: #999999;
+      font-style: italic;
+      text-align: center;
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    /* CSS styles for the cycling-tape-container */
+  .cycling-tape-container {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: tapeAnimation 2s infinite;  
+
+  }
+
+
+  /* Rest of the CSS code */
+
+
+  #wrapper .cycling-type {
+    color: #FFFFFF;
+  }
+
+  #wrapper .cycling-type__cycle {
+    color: #F224F2;
+  }
+
+  
+
+
+    /* ... Other styles */
+
+  /* Styles for the login icon */
+  .login-icon {
+    fill: white; /* Change the icon color to white */
+    transition: fill 0.3s ease-in-out; /* Add a transition effect for the color change */
+  }
+
+  .login-icon:hover {
+    fill: aquamarine; /* Change the icon color on hover */
+  }
+
+  .login-icon:active {
+    fill: red; /* Change the icon color when clicked */
+  }
+
+  #toolnav {
+    background-color: black; /* Set the default background color */
+  }
+  
+
+  
+  #toolnav:not(:hover) * {
+    display: none; /* Hide all child elements when not hovered */
+  }
+  
+
+#dashboardToggleBtn {
+    background-color: black;
+    padding: 5px 10px;
+    margin-left: 100px;
+    cursor: pointer;
+}
+
+#dashboard {
+    width: 500px;
+    margin-left: 80px;
+    margin-top: 10px;
+    left: 0;
+    top: 0;
+    background-color: red;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    z-index: 9999;
+
+}
+
+#dashboard:hover {
+  width: 500px;
+  height: 100%;
+  margin-left: 80px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background-color: red;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  z-index: 9999;
+  justify-content: baseline;
+
+}
+
+#dashboard h1 {
+    color: white;
+    font-size: 20px;
+    position: relative;
+  }
+
+  .form-step {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .form-step.current {
+    opacity: 1;
+  }
+  
+  .form-navigation {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  @keyframes slideInRight {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideOutLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
